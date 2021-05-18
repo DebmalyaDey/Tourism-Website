@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" >
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  <meta charset="UTF-8">
+  
+<link rel="shortcut icon" type="image/x-icon" href="Logo0.png" />
+
+  <title>About Us</title> 
+<style>
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400");
+.text-js {
+  opacity: 0;
+}
+
+.cursor {
+  display: block;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: -5px;
+  width: 2px;
+  /* Change colour of Cursor Here */
+  background-color: white;
+  z-index: 1;
+  -webkit-animation: flash 0.5s none infinite alternate;
+          animation: flash 0.5s none infinite alternate;
+}
+
+@-webkit-keyframes flash {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes flash {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  boz-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #00C4FF, #9D1BB2);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.headline {
+  margin: 20px;
+  color: white;
+  font-size: 28px;
+  text-align: center;
+}
+.headline h1 {
+  letter-spacing: 1.6px;
+  font-weight: 300;
+  font-family: Snell Roundhand ;
+  font-style: oblique;
+}
+
+.twitterLink {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 10px 15px;
+  z-index: 3;
+}
+.twitterLink svg {
+  width: 25px;
+}
+
+.credit {
+  position: fixed;
+  bottom: 20px;
+  left: 49%;
+  transform: translateX(-50%);
+  color: white;
+  text-decoration: none;
+}
+.help {
+  position: fixed;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  text-decoration: none;
+}
+.head {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  text-decoration: none;
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script> 
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+
+<body translate="no" >
+ <p class="head" align="center"><a href="home.html"><img src="LOGO4.png" height="80" width="280"></p></a><br> 
+<div class="type-js headline">
+  <h1 class="text-js">Enrich Your Life With Amazing Experience. Reimagin Travel Experience With Life Travel.</h1><br>
+  
+</div>
+<p class="credit">© 2021 Life Travel. All rights reserved. Life Travel and Life Travel Logo is the trademark of Life Travel Ltd.</p>
+<p class="help">For Help and Support: support@lifetravel.com</p>
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+      <script id="rendered-js" >
+
+function autoType(elementClass, typingSpeed) {
+  var thhis = $(elementClass);
+  thhis.css({
+    "position": "relative",
+    "display": "inline-block" });
+
+  thhis.prepend('<div class="cursor" style="right: initial; left:0;"></div>');
+  thhis = thhis.find(".text-js");
+  var text = thhis.text().trim().split('');
+  var amntOfChars = text.length;
+  var newString = "";
+  thhis.text("|");
+  setTimeout(function () {
+    thhis.css("opacity", 1);
+    thhis.prev().removeAttr("style");
+    thhis.text("");
+    for (var i = 0; i < amntOfChars; i++) {if (window.CP.shouldStopExecution(0)) break;
+      (function (i, char) {
+        setTimeout(function () {
+          newString += char;
+          thhis.text(newString);
+        }, i * typingSpeed);
+      })(i + 1, text[i]);
+    }window.CP.exitedLoop(0);
+  }, 1500);
+}
+
+$(document).ready(function () {
+  
+  autoType(".type-js", 200);
+});
+//# sourceURL=pen.js
+    </script>
+	
+</body>
+
+</html>
+ 

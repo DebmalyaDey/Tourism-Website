@@ -1,0 +1,58 @@
+<html>
+<link rel="shortcut icon" type="image/x-icon" href="Logo0.png" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+<script type="text/javascript"> 
+function disableselect(e){  
+return false  
+}  
+
+function reEnable(){  
+return true  
+}  
+
+//if IE4+  
+document.onselectstart=new Function ("return false")  
+document.oncontextmenu=new Function ("return false")  
+//if NS6  
+if (window.sidebar){  
+document.onmousedown=disableselect  
+document.onclick=reEnable  
+}
+</script>
+<title>Sign Up</title> 
+<style>
+body {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+</style>
+</head>
+<body>
+<p align="left"><a href="home.html"><img src="LOGO4.png" height="70" width="250"></p></a>
+<h3 align="left"><font color="purple">Sign Up to see tour packages</font></h3>
+<font color="lime"><b>
+<form action="sign.php" method="post">
+Phone Number:<input type="text" size="20" name="ph" value="">
+Name:<input type="text" name="Name" size="40" value="">
+Password:<input type="text" name="Pass" size="32" value="">
+Confirm Password:<input type="text" size="32" name="Pass1" value="">
+<input name="submit" type="submit" value="Create">
+<p>Already have an account!! <a href="log1.php">Click Here to Login</a></p>
+<p><img src="image7.jpg" width="1505" height="525"></p>
+</form>
+</body>
+</html>
